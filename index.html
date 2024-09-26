@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Print it ! - Impressions d'entreprise</title>
+	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="container">
+	<h1>
+		<img class="logo" src="./assets/images/logo.png" alt="كنيسة الاشرفية ترانيم مسيحية" >
+	</h1>
+	
+</header>
+<main>
+	<div id="banner">
+        <div class="carousel">
+            <div class="carousel-inner"></div>
+
+			
+            <!-- Dropdown for category selection -->
+            <div class="slide-selector">
+                <label for="category-select">إختيار رقم الترنيمة</label>
+				<select id="category-select">
+                    <option value="1">التسبيح والعبادة (56 - 1)</option>
+                    <option value="2">الفداء (105 - 57)</option>
+                    <option value="3">القيامة (114 - 106)</option>
+                    <option value="4">السماء والمجيء الثاني (150 - 115)</option>
+                    <option value="5">البنيان (256 - 151)</option>
+                    <option value="6">الخلاص (293 - 257)</option>
+                    <option value="7">الزواج (300 - 294)</option>
+                    <option value="8">دليل الترانيم (315 - 301)</option>
+                </select>
+
+                <label for="frame-number"> أنواع الترانيم</label>
+                <input type="number" id="frame-number" min="1" max="315" value="1"> <!-- Default to Category 1 range -->
+            </div>
+ <!-- New Buttons -->
+ <div class="share-buttons">
+	<button id="download-image">Download Image</button>
+	<button id="send-email">Send via Email</button>
+	<button id="send-whatsapp">Send via WhatsApp</button>
+</div>
+			 
+        </div>
+    </div>
+	
+	<section id="about-us" class="container">
+
+		<aside>
+			<img src="./assets/images/colors.jpg" alt="palette multicolore">
+		</aside>
+	</section>
+
+
+</main>
+<footer>
+	<div>
+		<p class="footer-contact">Contact</p>
+		<ul>
+			<li>Tel +961 3 926 042</li>
+			<li>Lun-Ven : 9h30-17h30</li>
+			<li>Sam : 10h-13h et 14h-17h30</li>
+		</ul>
+	</div>
+	<div>
+		<p>Numero de rue .... ,Nom de rue <br>
+			 Achrafieh</p>
+	</div>
+
+</footer>
+<script src="./assets/script.js"></script>
+</body>
+</html>
