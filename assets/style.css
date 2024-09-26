@@ -151,7 +151,7 @@ header {
 .share-buttons
 {
 	text-align: center;
-	margin-block: 2em;
+	margin-block: -2em;
 }
 
 
