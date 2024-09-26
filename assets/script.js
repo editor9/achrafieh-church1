@@ -95,8 +95,8 @@ updateCarousel();
 
 
 // Get references to the new buttons
-const sendEmailButton = document.getElementById("send-email");
-const sendWhatsAppButton = document.getElementById("send-whatsapp");
+//const sendEmailButton = document.getElementById("send-email");
+//const sendWhatsAppButton = document.getElementById("send-whatsapp");
 const downloadImageButton = document.getElementById("download-image"); // New button for downloading the image
 
 
@@ -110,7 +110,7 @@ function captureSlide() {
     }
     return null;
 }
-
+/*
 // Function to send an email with the image link
 sendEmailButton.addEventListener("click", function () {
     const imgSrc = captureSlide();
@@ -137,7 +137,7 @@ sendWhatsAppButton.addEventListener("click", function () {
     }
 });
 
-
+*/
 // Function to download the image as PNG or JPG
 downloadImageButton.addEventListener("click", function () {
     const imgSrc = captureSlide();
