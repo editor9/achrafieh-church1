@@ -24,8 +24,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
+	/*margin: 0;
+	padding: 0;*/
 	border: 0;
 	font: inherit;
 	font-size: 100%;
@@ -84,7 +84,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 0; 
+	padding: 40px 0; 
 }
 .logo{
 	width: 260px;
@@ -104,7 +104,7 @@ header {
 }
 
 #banner {
-	display: flex;
+	/*display: flex;*/
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
