@@ -8,6 +8,8 @@ const slides = Array.from({ length: 331 }, (_, i) => {
 const carouselInner = document.querySelector(".carousel-inner");
 const categorySelect = document.getElementById("category-select");
 const frameNumberInput = document.getElementById("frame-number");
+const downloadImageButton = document.getElementById("download-image");
+const sendWhatsAppButton = document.getElementById("send-whatsapp");
 
 let currentIndex = 0;
 
@@ -92,14 +94,6 @@ frameNumberInput.addEventListener("input", (event) => {
 // Initialize the carousel
 updateCarousel();
 
-
-
-// Get references to the new buttons
-//const sendEmailButton = document.getElementById("send-email");
-//const sendWhatsAppButton = document.getElementById("send-whatsapp");
-const downloadImageButton = document.getElementById("download-image"); // New button for downloading the image
-
-
 // Function to capture the current displayed slide
 function captureSlide() {
     const currentSlide = document.querySelector('.carousel-slide[style*="display: block"] .banner-img');
@@ -110,36 +104,10 @@ function captureSlide() {
     }
     return null;
 }
-/*
-// Function to send an email with the image link
-sendEmailButton.addEventListener("click", function () {
-    const imgSrc = captureSlide();
 
-    if (imgSrc) {
-        const emailBody = `Please find the image link: ${imgSrc}`;
-        const mailtoLink = `mailto:?subject=Slide Image&body=${encodeURIComponent(emailBody)}`;
-        window.location.href = mailtoLink;
-    } else {
-        alert("No image to send.");
-    }
-});
-
-// Function to send WhatsApp with the image link
-sendWhatsAppButton.addEventListener("click", function () {
-    const imgSrc = captureSlide();
-
-    if (imgSrc) {
-        const whatsappMessage = `Check out this image: ${imgSrc}`;
-        const whatsappLink = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(whatsappLink, '_blank');
-    } else {
-        alert("No image to send.");
-    }
-});
-
-*/
 // Function to download the image as PNG or JPG
-downloadImageButton.addEventListener("click", function () {
+downloadImageButton.addEventListener("click", function (event) {
+    event.preventDefault();  // Prevent any default behavior (like page navigation)
     const imgSrc = captureSlide();
 
     if (imgSrc) {
@@ -152,6 +120,18 @@ downloadImageButton.addEventListener("click", function () {
         document.body.appendChild(link);
         link.click();  // Trigger the download
         document.body.removeChild(link);  // Clean up
+    } else {
+        alert("No image to download.");
+    }
+});
+
+// Function to send the image via WhatsApp (without the link)
+sendWhatsAppButton.addEventListener("click", function () {
+    const imgSrc = captureSlide();
+
+    if (imgSrc) {
+        // Open the image in a new tab for download
+        window.open(imgSrc, '_blank');  // Opens the image in a new tab
     } else {
         alert("No image to download.");
     }
